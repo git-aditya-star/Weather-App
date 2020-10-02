@@ -45,15 +45,22 @@ class _WeatherPageState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Weather")),
+        appBar: AppBar(
+          title: Text("Weather"),
+          backgroundColor: Color(0xFFccccff),
+        ),
         body: Column(
           children: [
             Material(
               elevation: 20,
               child: Container(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        colors: [Color(0xFFcc99ff), Color(0xFFff99ff)])),
                 height: MediaQuery.of(context).size.height / 3,
                 width: MediaQuery.of(context).size.width,
-                color: Colors.lightBlue,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
